@@ -15,7 +15,8 @@ export default function Home() {
         </p>
         <div>
           <p>Just a demo.</p>
-          <Gist url='https://gist.github.com/Arnav3241/ab26aa8721450decc7d3cc676a85d5e5'  />
+          <Gist url='https://gist.github.com/Arnav3241/ab26aa8721450decc7d3cc676a85d5e5' 
+                LoadingComponent={() => <div>Waiting for Gist...</div>} />
           <br />
         </div>
     </React.Fragment>
