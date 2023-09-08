@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+// @ts-ignore
 import Gist from "super-react-gist"
 
 export default function Home() {
