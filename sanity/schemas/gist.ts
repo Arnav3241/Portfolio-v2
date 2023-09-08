@@ -1,4 +1,4 @@
-import GitGist from "../../components/GitGist"
+import GitGist from "../../src/app/components/GitGist"
 
 export default {
   name: 'gist',
