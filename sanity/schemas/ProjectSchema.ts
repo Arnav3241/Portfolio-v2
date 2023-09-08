@@ -18,6 +18,23 @@ export default {
             }
         },
         {
+          name: 'author',
+          title: 'Author',
+          type: 'reference',
+          to: {type: 'author'},
+        },
+        {
+          name: 'publishedAt',
+          title: 'Published at',
+          type: 'datetime',
+        },
+        {
+          name: 'projectType',
+          title: 'Project Type',
+          type: 'reference',
+          to: {type: 'projectType'},
+        },
+        {
             name: "image",
             title: "Image",
             type: "image",
