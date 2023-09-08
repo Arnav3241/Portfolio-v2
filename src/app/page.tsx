@@ -1,7 +1,8 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-// @ts-ignore
 import Gist from "super-react-gist"
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
           <code className="font-mono font-bold"><Link href={"/admin"}>Admin Page</Link></code>
         </p>
         <div>
-          <p>Just a demo of Github Gists.</p>
+          <p>Just a demo.</p>
           <Gist url='https://gist.github.com/Arnav3241/ab26aa8721450decc7d3cc676a85d5e5'  />
           <br />
         </div>
