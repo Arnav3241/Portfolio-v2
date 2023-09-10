@@ -18,11 +18,10 @@ export default function Home() {
           <br />
           <br />
         <div className='mx-[10vw]' >
-          <p>Just a demo.</p>
           <Gist 
                 className='gist'
                 url='https://gist.github.com/Arnav3241/ab26aa8721450decc7d3cc676a85d5e5' 
-                LoadingComponent={() => <div>Waiting for Gist...</div>} 
+                LoadingComponent={() => <div className='flex justify-center'> <Image width={`100`} height={`100`} src="/Loading.gif" alt='Loading...' /> </div> } 
                 />
           <br />
           <br />
