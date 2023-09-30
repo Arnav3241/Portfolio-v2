@@ -1,7 +1,7 @@
 export default {
-  title: 'Block Content',
   name: 'blockContent',
   type: 'array',
+  title: 'Block Content',
   of: [
     {
       title: 'Block',
@@ -23,11 +23,6 @@ export default {
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
           { title: 'Code', value: 'code' },
-          {
-            title: 'Highlight',
-            value: 'highlight',
-            icon: () => 'H'
-          }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -43,19 +38,16 @@ export default {
               },
             ],
           }
-          // <script src="https://gist.github.com/kaushikShresth/f236029de61e56b7a9172bb87fceee0c.js"></script>
         ],
       },
     },
+    // <script src="https://gist.github.com/kaushikShresth/f236029de61e56b7a9172bb87fceee0c.js"></script>
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
       type: 'image',
       options: { hotspot: true },
-    },
-    {
-      type: 'gist'
-    },
+    }
   ],
 }

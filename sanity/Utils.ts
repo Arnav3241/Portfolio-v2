@@ -4,7 +4,8 @@ export async function getProjects() {
     const client = createClient({
         projectId: "omhgxsgj",
         dataset: "production",
-        apiVersion: "2023-09-06",
+        apiVersion: "2021-10-21",
+        useCdn: false,
     })
 
     return client.fetch(
@@ -24,6 +25,6 @@ export async function getProjects() {
             body,
             _id,
             _createdAt,
-        }`
+        }`,
     )
 }

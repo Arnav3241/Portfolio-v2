@@ -1,11 +1,13 @@
-"use client"
-
 import Link from 'next/link'
 import React from 'react'
-// @ts-ignore
-import Gist from "super-react-gist"
+import { getProjects } from '../../sanity/Utils'
+import { Project } from '../../types/Project'
+import Image from 'next/image'
+import { PortableText } from "@portabletext/react"
 
-export default function Home() {
+
+export default async function Home() {
+  const Projects = await getProjects()
   return (
     <React.Fragment>
       <p className="flex w-full justify-center border-b h-[10vh] text-xl items-center">
@@ -17,13 +19,21 @@ export default function Home() {
       <br />
       <br />
       <div className='mx-[10vw]' >
-        <Gist
-          className='gist'
-          url='https://gist.github.com/Arnav3241/ab26aa8721450decc7d3cc676a85d5e5'
-          LoadingComponent={() => <div className='flex justify-center text-xl'> Loading... </div>}
-        />
         <br />
         <br />
+        <h1 className='px-10'>Here are some projects:</h1>
+        <br />
+        <div className="px-10">
+          {Projects.map((project: Project) => (
+            <div className="" key={project._id}>
+              <h1 className="text-4xl">
+                {project.title}<br />
+                {/* <Image src={project.image} width={500} height={500} alt={project.title} /> */}
+              </h1>
+              <PortableText value={project.body} />
+            </div>
+          ))}
+        </div>
       </div>
     </React.Fragment>
   )
